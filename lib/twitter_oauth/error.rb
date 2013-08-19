@@ -19,4 +19,7 @@ module TwitterOAuth
 
   class TwitterBadTokenError < RuntimeError
   end
+
+  class TwitterFollowingRateLimitExceededError < RuntimeError
+  end
 end
