@@ -22,4 +22,7 @@ module TwitterOAuth
 
   class TwitterFollowingRateLimitExceededError < RuntimeError
   end
+
+  class TwitterOverloadedError < RuntimeError
+  end
 end
