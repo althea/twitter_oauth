@@ -25,4 +25,7 @@ module TwitterOAuth
 
   class TwitterOverloadedError < RuntimeError
   end
+
+  class TwitterInternalError < RuntimeError
+  end
 end

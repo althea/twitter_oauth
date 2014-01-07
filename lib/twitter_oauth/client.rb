@@ -118,6 +118,7 @@ module TwitterOAuth
           raise TwitterBadTokenError if error['code'] == 32
           raise TwitterFollowingRateLimitExceededError if error['code'] == 161
           raise TwitterOverloadedError if error['code'] == 130
+          raise TwitterInternalError if error['code'] == 131
         end
         raise TwitterUnknownError.new(resp["errors"])
       end
