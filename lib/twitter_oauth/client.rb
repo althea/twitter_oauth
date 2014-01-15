@@ -61,12 +61,10 @@ module TwitterOAuth
     private
 
     def consumer(options={})
-      options[:secure] ||= false
-      protocol = options[:secure] ? 'https' : 'http'
       @consumer ||= OAuth::Consumer.new(
         @consumer_key,
         @consumer_secret,
-        { :site => "#{protocol}://#{@api_host}", :request_endpoint => @proxy }
+        { :site => "https://#{@api_host}", :request_endpoint => @proxy }
       )
     end
 
