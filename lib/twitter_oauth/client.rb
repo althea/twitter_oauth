@@ -121,8 +121,6 @@ module TwitterOAuth
           raise TwitterInternalError if error['code'] == 131
         end
         raise TwitterUnknownError.new(resp["errors"])
-      elsif !resp
-        raise TwitterEmptyResponse
       end
     end
   end

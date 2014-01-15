@@ -28,7 +28,4 @@ module TwitterOAuth
 
   class TwitterInternalError < RuntimeError
   end
-
-  class TwitterEmptyResponse < RuntimeError
-  end
 end
